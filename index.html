@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fulmotion - Your Personal AI Motion Graphics Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chosen Palette: Dark Charcoal & Warm Beige -->
+    <!-- Application Structure Plan: A classic high-conversion landing page structure is chosen to maximize sign-ups for the waitlist. The flow is designed to guide the user logically from awareness (Hero) to understanding (How it Works, Features) to desire (Demo) and finally to action (CTA Form). This linear narrative is proven to be effective for pre-launch startups. Placing the demo video at the very top of the Hero section, a key change from the previous version, makes the value proposition immediately tangible for the user. Key interactions include smooth scrolling CTAs and subtle on-scroll animations. -->
+    <!-- Visualization & Content Choices: The source 'report' is a product description, so the goal is marketing and conversion, not data analysis. The primary 'visualization' is the embedded video demo itself, which is the most effective way to communicate the product's functionality. Other content is presented in scannable sections with clear headings (Features, Use Cases) to address different user personas. The primary interactive element is the waitlist signup form (an embedded Google Form). -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1A1A1A;
+            color: #E5E5E5;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #D1A784, #E0C7B2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background-color: #1A1A1A;
+            background-image: radial-gradient(#2B2B2B 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(209, 167, 132, 0.3), 0 4px 6px -2px rgba(209, 167, 132, 0.2);
+        }
+        .feature-card {
+            transition: all 0.3s ease;
+            border: 1px solid #333333;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #D1A784;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-section {
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="fixed top-0 left-0 right-0 bg-black/50 backdrop-blur-sm z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter gradient-text">
+                Fulmotion
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#features" class="text-gray-300 hover:text-[#D1A784] transition">Features</a>
+                <a href="#use-cases" class="text-gray-300 hover:text-[#D1A784] transition">Use Cases</a>
+                <a href="#waitlist" class="text-gray-300 hover:text-[#D1A784] transition">Waitlist</a>
+            </nav>
+            <a href="#waitlist" class="cta-button bg-[#D1A784] text-white font-semibold py-2 px-5 rounded-lg shadow-lg">
+                Join Waitlist
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-bg pt-32 pb-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tighter mb-4">
+                    Create Pro Motion Graphics
+                    <br>
+                    <span class="gradient-text">with a Single Prompt.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+                    Unleash your creative potential and productivity. Fulmotion is your personal AI editor that turns raw footage into stunning, shareable videos in minutes, not hours.
+                </p>
+                
+                <div class="mt-8 max-w-4xl mx-auto bg-black rounded-2xl shadow-2xl overflow-hidden aspect-video">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/y5YIrRT8KAw" title="Fulmotion Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                
+                <a href="#waitlist" class="cta-button inline-block bg-[#D1A784] text-[#1A1A1A] font-bold py-4 px-10 text-lg rounded-lg shadow-xl mt-8">
+                    Get Exclusive Early Access
+                </a>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="py-20 bg-[#1A1A1A]">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-3">Effortless Creation in 3 Steps</h2>
+                    <p class="text-gray-400 text-lg max-w-2xl mx-auto">Transform your ideas into reality faster than ever before.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-10 text-center">
+                    <div class="p-8">
+                        <div class="text-5xl mb-4">1.</div>
+                        <h3 class="text-2xl font-semibold mb-2">Upload & Select</h3>
+                        <p class="text-gray-500">Drop in your raw footage and choose the segment you want to bring to life.</p>
+                    </div>
+                    <div class="p-8">
+                        <div class="text-5xl mb-4">2.</div>
+                        <h3 class="text-2xl font-semibold mb-2">Describe Your Vision</h3>
+                        <p class="text-gray-500">Tell Fulmotion what you want in plain English. No complex tools, just your words.</p>
+                    </div>
+                    <div class="p-8">
+                        <div class="text-5xl mb-4">3.</div>
+                        <h3 class="text-2xl font-semibold mb-2">Refine & Export</h3>
+                        <p class="text-gray-500">The AI generates the edit. Tweak any layer you want, then export for any platform.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="features" class="py-20 bg-[#262626]">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-3">The Power of a Pro Studio, Simplified.</h2>
+                    <p class="text-gray-400 text-lg max-w-2xl mx-auto">Fulmotion combines intelligent automation with granular control.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="feature-card bg-[#333333] p-8 rounded-xl shadow-sm">
+                        <div class="text-3xl mb-4">🧠</div>
+                        <h3 class="text-xl font-bold mb-2">AI Co-Pilot</h3>
+                        <p class="text-gray-400">Your creative partner that understands trends, suggests edits, and animates assets to match your style.</p>
+                    </div>
+                    <div class="feature-card bg-[#333333] p-8 rounded-xl shadow-sm">
+                        <div class="text-3xl mb-4">🎨</div>
+                        <h3 class="text-xl font-bold mb-2">Full Customization</h3>
+                        <p class="text-gray-400">Every AI-generated layer is fully editable. Tweak timing, colors, and effects without the steep learning curve.</p>
+                    </div>
+                    <div class="feature-card bg-[#333333] p-8 rounded-xl shadow-sm">
+                        <div class="text-3xl mb-4">🔗</div>
+                        <h3 class="text-xl font-bold mb-2">Dynamic Asset Sync</h3>
+                        <p class="text-gray-400">Fulmotion intelligently integrates your logos, images, and clips, syncing them perfectly to your video's rhythm.</p>
+                    </div>
+                    <div class="feature-card bg-[#333333] p-8 rounded-xl shadow-sm">
+                        <div class="text-3xl mb-4">⏱️</div>
+                        <h3 class="text-xl font-bold mb-2">Save Hours of Work</h3>
+                        <p class="text-gray-400">Automate repetitive animation tasks and tedious keyframing. Focus on creativity, not clicks.</p>
+                    </div>
+                     <div class="feature-card bg-[#333333] p-8 rounded-xl shadow-sm">
+                        <div class="text-3xl mb-4">🚀</div>
+                        <h3 class="text-xl font-bold mb-2">Viral-Ready Exports</h3>
+                        <p class="text-gray-400">Instantly export your creations in formats optimized for TikTok, Reels, YouTube Shorts, and more.</p>
+                    </div>
+                    <div class="feature-card bg-[#333333] p-8 rounded-xl shadow-sm">
+                        <div class="text-3xl mb-4">📈</div>
+                        <h3 class="text-xl font-bold mb-2">Scale Your Output</h3>
+                        <p class="text-gray-400">Perfect for agencies and teams looking to produce high-quality video content faster than ever before.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="use-cases" class="py-20 bg-[#1A1A1A]">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-3">Built for Every Creator</h2>
+                    <p class="text-gray-400 text-lg max-w-2xl mx-auto">Whether you're a beginner or a seasoned pro, Fulmotion is your secret weapon.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-[#262626] p-8 rounded-lg border border-[#333333]">
+                        <h3 class="text-2xl font-semibold mb-3">For Content Creators</h3>
+                        <p class="text-gray-400">Edit like your favorite YouTuber even with zero design skills. Go viral without spending weeks learning complex software.</p>
+                    </div>
+                    <div class="bg-[#262626] p-8 rounded-lg border border-[#333333]">
+                        <h3 class="text-2xl font-semibold mb-3">For Agencies</h3>
+                        <p class="text-gray-400">Scale client work and deliver stunning video ads and social content at lightning speed. Boost your agency's efficiency and profits.</p>
+                    </div>
+                    <div class="bg-[#262626] p-8 rounded-lg border border-[#333333]">
+                        <h3 class="text-2xl font-semibold mb-3">For Pro Editors</h3>
+                        <p class="text-gray-400">Let AI handle the repetitive, time-consuming tasks. Use Fulmotion as a powerful assistant to speed up your workflow and focus on high-level edits.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="waitlist" class="py-20 bg-[#1A1A1A]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center bg-[#262626] p-10 rounded-2xl border border-[#333333]">
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Be the First to Experience Fulmotion.</h2>
+                    <p class="text-gray-400 text-lg mb-8">Join our exclusive waitlist for early access, special launch pricing, and behind-the-scenes updates. The future of video editing is coming.</p>
+                    
+                    <div class="shadow-lg rounded-lg overflow-hidden">
+                         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeaIL26gnd85P7tbzpu3UQ1MeEjAeZksoMPjeu3QWuJalVBmQ/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-4">We respect your privacy. No spam, ever.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#1A1A1A] text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="text-3xl font-bold tracking-tighter mb-4 gradient-text">
+                Fulmotion
+            </div>
+            <p class="text-gray-500 mb-6">&copy; 2025 Fulmotion. All rights reserved. The future is automated.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in-section');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+</body>
+</html>
